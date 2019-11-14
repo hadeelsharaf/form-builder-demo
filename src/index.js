@@ -1,12 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import { ReactFormBuilder } from 'react-form-builder2';
+import DemoBar from './demobar';
+import * as variables from './variables';
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import 'react-form-builder2/dist/app.css';
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+ReactDOM.render(
+  <ReactFormBuilder  />,
+  document.getElementById('form-builder'),
+);
+
+ReactDOM.render(
+  <DemoBar variables={variables} />,
+  document.getElementById('demo-bar'),
+);
